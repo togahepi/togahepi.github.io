@@ -1,0 +1,13 @@
+b.money::before{
+	content: "Giá thành chỉ: ";
+}
+
+b.money::after{
+	content: " VND/lít";
+}
+
+.money {
+	color: red;
+	font-style: italic;
+	font-size: 30px;
+}
