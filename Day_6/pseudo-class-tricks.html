@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<style type="text/css">
+			.hover-target:hover + .hover-element {
+				opacity: 30;
+				transform: translateX(100000px);
+			}
+			.hover-element {
+				border-radius: 5px;
+				background:  #c0392b;
+				margin: 0px 10px;
+				text-align: center;
+				padding: 5px 10px;
+				opacity: 0;
+				transform: translateX(40px);
+				transition: all 5s ease;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="content">
+			<div class="hover-target">Hover tôi đi</div>
+			<div class="hover-element">Tôi đang được bạn chuột chú ý</div>
+		</div>
+	</body>
+</html>
