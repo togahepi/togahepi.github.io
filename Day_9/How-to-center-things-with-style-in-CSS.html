@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>How to center things with style in CSS</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		.baidich-goi {
+			text-align: center;
+			padding-left: 50px;
+			padding-right: 50px;
+		}
+		.baidich {
+			width: 1000px;
+			height: 1000px;
+			display: inline-block;
+		}
+	</style>
+</head>
+<body>
+	<div class="baidich-goi">
+		<div class="baidich">
+		<h1>Cách để căn giữa mọi thứ với CSS</h1>
+		<img src="pic-1.jpeg">
+		<h2>Nếu bạn mới chỉ bắt đầu trên con đường sự nghiệp coding, và may mắn sao tôi lại có được sự chú ý của bạn trong vài phút...hãy lưu ngay bài viết này lại nhé!</h2>
+		<p>Hãy thành thật với nhau nhé.</p>
+		<p>Đôi lúc trải qua quãng đời coding, chúng ta chợt nhận ra nhiều lúc quá mệt mỏi với việc căn giữa mọi thứ (tìm cách căn giữa thẻ div nằm trong 1 thẻ div khác trên Google hay Stack Overflow).</p>
+		<p>Nó có thể chỉ là một việc giản đơn, nhưng lại nhanh chóng trở thành nỗi mệt mỏi khi bạn thêm nhiều phần tử hay định dạng cho trang của mình.</p>
+		<p>Do đây cũng là một vấn đề khá bình thường, tôi soạn ra đây 1 danh sách các cách căn giữa với CSS. Tôi cũng đã thêm vào các thẻ nhúng/đường link với mỗi ví dụ trên CodePen. Hãy thoải mái chia sẻ chúng nhé!</p>
+		<p><i>View my CodePens <a href="https://codepen.io/stephen_sun/">here.</a></i></p>
+		<h2>Không dài dòng thêm nữa, chiến thôi nào!</h2>
+		<p data-height="265" data-theme-id="0" data-slug-hash="PajMNR" data-default-tab="css,result" data-user="stephen_sun" data-pen-title="Centering with CSS Part 1" class="codepen">See the Pen <a href="https://codepen.io/stephen_sun/pen/PajMNR/">Centering with CSS Part 1</a> by Stephen Sun (<a href="https://codepen.io/stephen_sun">@stephen_sun</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+		<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+		<p class="caption">Căn giữa với Căn text, Margin Auto và Absolute Positioning</p>
+
+		<h1>Phương pháp căn text</h1>
+		<p>Sử dụng "text-align:center" có lẽ là cách thông dụng nhất để bạn căn giữa. Nó dùng để căn giữa chữ trong trang HTML của bạn, nhưng nó cũng có thể căn giữa cả thẻ div luôn đó.</p>
+		<h2>Mẹo ở đây là:</h2>
+		<ol>
+			<li>Bao gói thẻ div mà bạn muốn căn giữa trong một phần tử cha (hay còn gọi là một wrapper hay container)</li>
+			<li>Đặt "text-align:center" vào phần tử cha</li>
+			<li>Sau đó đặt bên trong thẻ div thuộc tính "display: inline-block"</li>
+		</ol>
+		<p>Trong ví dụ của tôi với hình vuông màu xanh da trời, Tôi gói nó vào 1 thẻ div khác đặt tên là "blue-square-container". Để có thể căn giữa hình vuong màu xanh da trời, tôi phải tạo một phần tử cha và đặt thuộc tính hiển thị của hình vuông màu xanh da trời là "inline-block".</p>
+		<p>Đó là bởi vì mặc định một thẻ div sẽ hiển thị với thuộc tính "block", nghĩa là nó sẽ giãn ra bằng cả chiều rộng của trang. Bằng cách đặt thuộc tính hiển thị thành "inline-block", chúng ta sẽ chắc chắn rằng nó chỉ có chiều rộng mà ta đã đặt, ở đây là 100px.</p>
+		<h2>Thêm bao nhiêu phần tử con vào trong phần tử cha (những hình vuông màu xanh da trời trong ví dụ) đều sẽ căn giữa chúng hết.</h2>
+		<h1>Phương pháp Margin Auto</h1>
+		<p>Một phương pháp đơn giản khác đó là sử dụng phương pháp margin auto. Dùng nó ta sẽ không cần đến phần tử cha.</p>
+		<h2>Chúng ta có thể đơn giản chỉ thêm thuộc tính "margin: 0 auto" cho hình vuông màu vàng, miễn là chúng ta đặt cho nó một chiều rộng đã định.</h2>
+		<p>"margin: 0 auto" là cách viết tắt để đặt margin top và bottom là 0, và margin left và right là auto</p>
+		<p>Điều này vô cùng quan trọng, bởi nếu không đặt chiều rộng là 100px, thì trình duyệt sẽ không thể biết được mà chia margin left và right cho phù hợp để căn giữa hình vuông màu vàng.</p>
+		<p>Phần "0" trong thuộc tính có thể đặt tùy ý theo số pixel mà bạn muốn đặt cho top và bottom margin.</p>
+		<p>Một mẹo hay nữa là chỉ cần đặt "margin-left: auto" hay "margin-right: auto" là chúng ta có thể đẩy thẻ div về phía phải hay trái hoàn toàn (thử đi nhé!)</p>
+		<h1>Phương pháp vị trí tuyệt đối</h1>
+		<p>Đặt một phần tử với vị trí tuyệt đối cho phép chúng đặt phần tử đó ở bất kì chỗ nào trên trang...với một điểm bất lợi.</p>
+		<h2>Vị trí tuyệt đối loại bỏ phần tử khỏi dòng chảy của trang web.</h2>
+		<p>Tại sao điều này lại quan trọng?</p>
+		<p>Bởi vì rằng nó sẽ gây chồng lấn các phần tử với nhau nếu sử dụng không đúng cách.</p>
+		<p>Nếu chúng ta chỉ muốn đơn giản căn giữa một phần tử thẻ chiều ngang của trang như là cách chúng ta làm với 2 phương pháp trên, có 3 bước nên ghi nhớ:</p>
+		<ol>
+			<li>Đặt vị trí phần tử với thuộc tính vị trí tuyệt đối</li>
+			<li>Thêm thuộc tính "left:50%" vào phần tử</li>
+			<li>Đặt margin left bằng một nửa chiều rộng phần tử</li>
+		</ol>
+		<p>Trong ví dụ, chúng ta dùng một hình vuông màu xanh (đẹp xuất sắc). Nó có kích thước giống như các ví dụ khác là 100px.</p>
+		<p>Như bạn đã thấy, tôi thêm thuộc tính "position: absolute" và "left:50%" vào hình vuông màu xanh. Nó sẽ chỉ cho trình duyệt di chuyển lề trái dịch 50% về bên phải</p>
+		<p>Nhưng nếu tôi tạo lại ví dụ, và ta không muốn để lề trái vào chính giữa, mà chính giữa của hình vuông sẽ thẳng hàng với chính giữa trang web.</p>
+		<p>Điều này sẽ dẫn ta tới bước cuối cùng. Để thẳng hàng mọi thứ và thêm khoảng trắng, ta sẽ áp một "margin-left" bằng nửa chiều rộng của hình vuông màu xanh. Trong trường hợp này là 50px (theo chiều rộng của phần tử, luôn luôn là một nửa)</p>
+		<p data-height="265" data-theme-id="0" data-slug-hash="WyENWK" data-default-tab="css,result" data-user="stephen_sun" data-pen-title="Centering with CSS Part 2 (Transform/Translate Method)" class="codepen">See the Pen <a href="https://codepen.io/stephen_sun/pen/WyENWK/">Centering with CSS Part 2 (Transform/Translate Method)</a> by Stephen Sun (<a href="https://codepen.io/stephen_sun">@stephen_sun</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+		<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+		<p class="caption">Căn giữa với Transform/Translate</p>
+		<h1>Phương pháp Transform/Translate</h1>
+		<p>Cho tới lúc này ta mới tìm hiểu cách để căn giữa mọi thứ theo chiều ngang, nhưng nếu chúng ta muốn đặt nó chính giữa 2 chiều của trang thì sao?</p>
+		<p>Hãy thử căn giữa theo cả chiều dọc lẫn chiều ngang xem sao.</p>
+		<p>Do phương pháp này cũng dùng vị trí tuyệt đối và "left:50%" tôi đã thêm 2 thuộc tính nữa vào trong phần tử.</p>
+		<p>Bằng cách đặt thuộc tính top là "50%", tôi chỉ cho trình duyệt căn thẳng viền trên của hình vuông màu đỏ vào giữa trang theo chiều dọc. Nhưng như ví dụ trước, chúng ta không muốn viền được căn giữa mà là tâm của hình vuông vào giữa trang.</p>
+		<h2>Đây là cách chúng ta áp dụng một thuộc tính mới đó là "transform".</h2>
+		<p>Sẽ có nhiều nhiều trò hay mà bạn có thể làm với transform, như là tịnh tiến, xoay hay cân chỉnh hiệu ứng động, nhưng trong ví dụ này chúng ta sẽ sử dụng tịnh tiến</p>
+		<p>Chúng ta thêm thuộc tính cho transform "transform: translate(-50%,-50%)" và a lê hấp!</p>
+		<p>Hình vuông màu đỏ đã căn giữa theo cả chiều ngang lẫn chiều dọc</p>
+		<p>Tôi vô cùng thích dùng phương pháp này bởi mặc cho chiều rộng hay cao của phần tử là bao nhiêu nó đều sẽ được căn giữa vào trang.</p>
+		<h2>Phương pháp này thường được sử dụng trong thiết kế responsive và không cần đặt margin như là phương pháp vị trí tuyệt đối</h2>
+		<h1>Phương pháp Flexbox</h1>
+		<p data-height="265" data-theme-id="0" data-slug-hash="ERvxqa" data-default-tab="css,result" data-user="stephen_sun" data-pen-title="Centering with CSS Part 3 (Flexbox Method)" class="codepen">See the Pen <a href="https://codepen.io/stephen_sun/pen/ERvxqa/">Centering with CSS Part 3 (Flexbox Method)</a> by Stephen Sun (<a href="https://codepen.io/stephen_sun">@stephen_sun</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+		<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+		<p class="caption">Căn giữa với Flexbox</p>
+		<p>Nếu bạn chưa quen với Flexbox, cũng không sao cả! Flexbox là một module layout giúp chúng ta dễ dàng căn chỉnh và đặt các phần tử trong trang web.</p>
+		<p>Nếu bạn <b>cảm thấy hứng thú với việc học Flexbox (khuyên chân thành học đê), <a href="https://flexboxfroggy.com/">Flexbox Froggy</a></b> là một nơi tuyệt vời và siêu vui để học(không ép buộc gì đâu chỉ là tôi đã từng học về Flexbox</p>
+		<p>Có 4 bước để căn giữa cả ngang lẫn dọc với Flexbox là:</p>
+		<ol>
+			<li>HTML, body hay phần tử cha phải đặt chiều cao là 100%</li>
+			<li>Đặt "display: flex;" cho phần tử cha bao gói</li>
+			<li>Đặt "align-items: center"</li>
+			<li>Đặt "justify-content: center" căn đều 2 bên vào giữa phần tử bao gói cha</li>
+		</ol>
+		<p>Tôi cũng thích dùng cách này, nó đều thoả mãn <b>responsive</b> và <b>lại không cần tính toán margin.</b></p>
+		<p>Tôi mong rằng bạn thấy bài này khai sáng và giúp đỡ bạn. Tôi luôn mong đón nhận những ý kiến phản hồi nhé! :D</p>
+	</div>
+	</div>
+	
+	
+</body>
+</html>
