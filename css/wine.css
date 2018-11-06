@@ -1,12 +1,149 @@
+* {
+	box-sizing: border-box;
+}
+.banner img {
+	width: 100%;
+	height: auto;
+	margin: auto;
+}
+.main-menu {
+	margin: 10px 10px 10px 10px;
+}
+.main-content {
+	clear: both;
+}
+.menubox-container {
+	display: block;
+	width: 640px;
+	height: 80px;
+	margin: 0 auto;
+}
+.menubox a {
+				display: block;
+				font-size: 20px;
+				text-decoration: none;
+				padding: 0;
+				text-align: center;
+				margin-top: 10px;
+
+			}
+.menubox {
+	display: inline-block;
+	float: left;
+	width: 160px;
+	height: 60px;
+	border: 1px solid;
+	border-top-width: 8px;
+	border-radius: 20%;
+}
+.home {
+	border-color: #76a7fa;
+}
+.home a {
+	color: #76a7fa;
+}	
+.about {
+	border-color: #f9b256;
+}
+.about a {
+	color: #f9b256;
+}
+.gallery {
+	border-color: #4dbfd9;
+}
+.gallery {
+	color: #4dbfd9;
+}
+.post {
+	border-color: #000000;
+}
+.post a {
+	color: black;
+}
+.menubox a:hover {
+	color: green;
+	font-size: 25px;
+	text-decoration: underline;
+}
+p.title {
+				text-align: center;
+				clear: left;
+				padding: 20px;
+				font-weight: bold;
+				font-style: italic;
+				color: purple;
+			}
 img {
 	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	max-width: 300px;
-	min-width: 300px;
+	margin: 0 auto;
+	width: 300px;
+	height: 300px;
 }
 p {
 	text-align: center;
 	font-size: 30px;
 	text-decoration: none;
+}
+.hang1 {
+	float: left;
+	width: 300px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+.hang1-container {
+	width: 1000px;
+	height: 450px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	clear: both;
+}
+.hang2 {
+	float: left;
+	width: 30%;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+.hang2-container {
+	width: 1000px;
+	height: 450px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	clear: both;
+}
+.hang3 {
+	float: left;
+	width: 30%;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+.hang3-container {
+	width: 1000px;
+	height: 450px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	clear: both;
+}
+body a {
+	text-decoration: none;
+}
+body a p {
+	color: purple;
+}
+.gallery img:hover {
+	border-radius: 5%;
+	border-style: groove;
+	border-width: 20px;
+	border-color: orange;
 }
