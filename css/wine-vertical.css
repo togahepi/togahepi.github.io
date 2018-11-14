@@ -1,13 +1,15 @@
 * {
 	box-sizing: border-box;
 }
-.banner {
-	width: 80%;
+#banner {
+	width: 1000px;
 	height: auto;
 	margin: 0 auto;
+	position: relative;
 }
-.banner img {
+#banner img {
 	width: 100%;
+
 }
 .main-menu {
 	margin: 10px 10px 10px 10px;
@@ -18,16 +20,16 @@
 .menubox-container {
 	width: 50px;
 	position: absolute;
-	top: 0;
-	left: 0;
+    top: 40px;
+    left: 66px;
 }
-.menubox-container > a:first-child {
+#banner > a:first-child {
 	padding: 4px;
 	position: absolute;
-	top: -104px;
-    left: -134px;
+    top: 101px;
+    left: 89px;
 }
-.menubox-container > a:first-child > img {
+#banner > a:first-child > img {
 	width: 120px;
 }
 .menubox a {
@@ -78,13 +80,14 @@
 	text-decoration: underline;
 }
 p.title {
-				text-align: center;
-				clear: left;
-				padding: 20px;
-				font-weight: bold;
-				font-style: italic;
-				color: purple;
+	text-align: center;
+	padding: 20px;
+	color: purple;
 			}
+.gallery {
+	position: relative;
+    left: 282px;
+}
 .gallery img {
 	display: block;
 	margin: 0 auto;
@@ -92,8 +95,7 @@ p.title {
 	height: 200px;
 }
 p {
-	text-align: center;
-	font-size: 30px;
+	font-size: 18px;
 	text-decoration: none;
 }
 .hang1 {
@@ -103,13 +105,6 @@ p {
 	margin-right: 10px;
 }
 .hang-container {
-	width: 1000px;
-	height: 450px;
-	padding-top: 20px;
-	padding-bottom: 20px;
-	margin-left: 200px;
-	margin-top: 20px;
-	margin-bottom: 20px;
 	clear: both;
 }
 .hang2 {
@@ -137,6 +132,10 @@ body a p {
 	border-style: groove;
 	border-width: 5px;
 	border-color: orange;
+}
+.wrap {
+	position: absolute;
+	left: 8%;
 }
 #chat {
 	position: fixed;
