@@ -1,12 +1,12 @@
 * {
 	box-sizing: border-box;
 }
-#banner {
+.banner {
 	width: 80%;
 	height: auto;
 	margin: 0 auto;
 }
-#banner img {
+.banner img {
 	width: 100%;
 }
 .main-menu {
@@ -16,11 +16,10 @@
 	clear: both;
 }
 .menubox-container {
-	display: block;
-	width: 640px;
-	height: 80px;
-	margin: 0 auto;
-	position: relative;
+	width: 50px;
+	position: absolute;
+	top: 0;
+	left: 0;
 }
 .menubox-container > a:first-child {
 	padding: 4px;
@@ -61,10 +60,10 @@
 .about a {
 	color: #f9b256;
 }
-.gallery {
+.gallery1 {
 	border-color: #4dbfd9;
 }
-.gallery {
+.gallery1 {
 	color: #4dbfd9;
 }
 .post {
@@ -89,8 +88,8 @@ p.title {
 .gallery img {
 	display: block;
 	margin: 0 auto;
-	width: 300px;
-	height: 300px;
+	width: 200px;
+	height: 200px;
 }
 p {
 	text-align: center;
@@ -99,55 +98,34 @@ p {
 }
 .hang1 {
 	float: left;
-	width: 300px;
+	width: 200px;
 	margin-left: 10px;
 	margin-right: 10px;
 }
-.hang1-container {
+.hang-container {
 	width: 1000px;
 	height: 450px;
 	padding-top: 20px;
 	padding-bottom: 20px;
-	margin-left: auto;
-	margin-right: auto;
+	margin-left: 200px;
 	margin-top: 20px;
 	margin-bottom: 20px;
 	clear: both;
 }
 .hang2 {
 	float: left;
-	width: 30%;
+	width: 200px;
 	margin-left: 10px;
 	margin-right: 10px;
 }
-.hang2-container {
-	width: 1000px;
-	height: 450px;
-	padding-top: 20px;
-	padding-bottom: 20px;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 20px;
-	margin-bottom: 20px;
-	clear: both;
-}
+
 .hang3 {
 	float: left;
-	width: 30%;
+	width: 200px;
 	margin-left: 10px;
 	margin-right: 10px;
 }
-.hang3-container {
-	width: 1000px;
-	height: 450px;
-	padding-top: 20px;
-	padding-bottom: 20px;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 20px;
-	margin-bottom: 20px;
-	clear: both;
-}
+
 body a {
 	text-decoration: none;
 }
