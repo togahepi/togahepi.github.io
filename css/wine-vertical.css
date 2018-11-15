@@ -102,8 +102,8 @@ p {
 .hang1 {
 	float: left;
 	width: 200px;
-	margin-left: 10px;
-	margin-right: 10px;
+	margin: 10px;
+	opacity: 1;
 }
 .hang-container {
 	clear: both;
@@ -111,15 +111,14 @@ p {
 .hang2 {
 	float: left;
 	width: 200px;
-	margin-left: 10px;
-	margin-right: 10px;
+	margin: 10px;
+	overflow: hidden;
 }
 
 .hang3 {
 	float: left;
 	width: 200px;
-	margin-left: 10px;
-	margin-right: 10px;
+	margin: 10px;
 }
 
 body a {
@@ -128,16 +127,18 @@ body a {
 body a p {
 	color: purple;
 }
-.gallery img {
-	opacity: 1;
-}
+
 .gallery img:hover {
-	border-radius: 5%;
-	border-style: groove;
-	border-width: 5px;
-	border-color: orange;
 	opacity: 0.8;
-	transition: opacity 0.5s cubic-bezier(1, -0.44, 1, 1);
+	transition: all 0.5s cubic-bezier(1, -0.44, 1, 1);
+	
+}
+.hang1:hover {
+	transform: translate(0,-5px);
+	box-shadow: 5px 10px 8px 0px rgba(0,0,0,0.2);	
+}
+.hang2:hover img {
+	transform: scale(1.2);
 }
 .wrap {
 	position: absolute;
