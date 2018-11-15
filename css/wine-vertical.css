@@ -97,6 +97,7 @@ p.title {
 p {
 	font-size: 18px;
 	text-decoration: none;
+	text-align: center;
 }
 .hang1 {
 	float: left;
@@ -127,11 +128,16 @@ body a {
 body a p {
 	color: purple;
 }
+.gallery img {
+	opacity: 1;
+}
 .gallery img:hover {
 	border-radius: 5%;
 	border-style: groove;
 	border-width: 5px;
 	border-color: orange;
+	opacity: 0.8;
+	transition: opacity 0.5s cubic-bezier(1, -0.44, 1, 1);
 }
 .wrap {
 	position: absolute;
