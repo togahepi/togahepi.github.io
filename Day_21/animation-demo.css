@@ -18,12 +18,58 @@ h1 {
 	animation: title 10s ease infinite;
 }
 
+.container {
+	width: 100%;
+	position: relative;
+}
+@keyframes loading {
+	0% {
+		
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+#top img {
+	position: absolute;
+	top: 100px;
+    left: 550px;
+    animation: loading 5s ease infinite;
+}
+#back img {
+	clear: both;
+	position: relative;
+	display: block;
+	width: 800px;
+	margin: 0 auto;
+	height: auto;
+}
+h2 {
+	position: absolute;
+	top: 380px;
+    left: 630px;
+    background-color: white;
+    width: 120px;
+    height: 40px;
+    padding-top: 10px;
+    text-align: center;
+    border: 2px white;
+    border-radius: 20%;
+    animation: textloading 0.25s ease infinite;
+}
+@keyframes textloading{
+	100% {
+		color: red;
+	}
+}
 p {
+	display: block;
 	font-size: 30px;
 	position: absolute;
-	bottom: 20px;
+	top: 590px;
 	right: 20px;
-	animation: author 5s ease infinite;
+	padding-bottom: 50px;
+	animation: author 3s linear infinite;
 }
 @keyframes author {
 	0% {color: white}
