@@ -1,0 +1,26 @@
+body {
+	color: black
+}
+
+ul {
+	color: green;
+}
+
+li {
+	color: blue;
+}
+
+a {
+	color: red;
+}
+
+#menu {
+	list-style-type: none;
+}
+#menu > li > ul {
+	list-style-type: none;
+	display: none;
+}
+#menu > li:hover > ul {
+	display: block;
+}
