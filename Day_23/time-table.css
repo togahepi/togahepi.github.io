@@ -34,3 +34,7 @@ table tr, td {
 ul {
 	list-style-image: url(smile.png);
 }
+#important {
+	color: green;
+	font-weight: bold;
+}
