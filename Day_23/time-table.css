@@ -1,0 +1,31 @@
+h1 {
+	color: red;
+	font-family: sans-serif;
+	text-align: center;
+}
+h1 span {
+	color: lightblue;
+}
+table {
+	border:5px;
+	border-color: blue;
+	border-style: solid;
+	font-size: 25px;
+	width: 1000px;
+	margin: 0 auto;
+}
+table tr:first-child td {
+	text-align: center;
+	color: red;
+}
+table tr td:first-child {
+	text-align: center;
+	color: red;
+}
+
+table tr, td {
+	padding: 7px;
+}
+ul {
+	list-style-image: url(smile.png);
+}
