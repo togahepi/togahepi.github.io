@@ -1,0 +1,13 @@
+#menu li {
+	list-style-type: none;
+	padding: 5px;
+	display: block;
+}
+
+#menu > li > ul {
+	list-style-type: none;
+	display: none;
+}
+#menu > li:hover > ul {
+	display: block;
+}

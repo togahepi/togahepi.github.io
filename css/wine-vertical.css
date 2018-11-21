@@ -93,14 +93,14 @@ p {
 
 .gallery img:hover {
 	opacity: 0.8;
-	transition: all 0.5s cubic-bezier(1, -0.44, 1, 1);
+	transition: all 1s cubic-bezier(1, -0.44, 1, 1);
 	
 }
 .hang1:hover {
 	transform: translate(0,-5px);
 	box-shadow: 5px 10px 8px 0px rgba(0,0,0,0.2);	
 }
-.hang2:hover img {
+.hang2 img:hover {
 	transform: scale(1.2);
 }
 .wrap {
