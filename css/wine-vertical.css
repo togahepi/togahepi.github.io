@@ -11,17 +11,30 @@
 	width: 100%;
 
 }
-.main-menu {
-	margin: 10px 10px 10px 10px;
+.vertical-menu {
+	margin: 30px 44px 44px 30px;
+	width: 135px;
+	display: inline-block;
 }
-.main-content {
-	clear: both;
+.vertical-menu a {
+	border: 2px solid #caeaf1;
+	border-radius: 30%;
+	background-color: white;
+	color: red;
+	font-family: sans-serif;
+	padding: 12px;
+	margin: 3px;
+	text-align: center;
+	display: block;
+	text-decoration: none;
 }
-.menubox-container {
-	width: 50px;
-	position: absolute;
-    top: 40px;
-    left: 66px;
+.vertical-menu a:hover {
+	background-color: #26C6DA;
+	color: white;
+}
+.vertical-menu a.active {
+	background-color: #26C6DA;
+	color: white;
 }
 #banner > a:first-child {
 	padding: 4px;
@@ -32,61 +45,17 @@
 #banner > a:first-child > img {
 	width: 120px;
 }
-.menubox a {
-				display: block;
-				font-size: 20px;
-				text-decoration: none;
-				padding: 0;
-				text-align: center;
-				margin-top: 10px;
 
-			}
-.menubox {
-	display: inline-block;
-	float: left;
-	width: 160px;
-	height: 60px;
-	border: 1px solid;
-	border-top-width: 8px;
-	border-radius: 20%;
-}
-.home {
-	border-color: #76a7fa;
-}
-.home a {
-	color: #76a7fa;
-}	
-.about {
-	border-color: #f9b256;
-}
-.about a {
-	color: #f9b256;
-}
-.gallery1 {
-	border-color: #4dbfd9;
-}
-.gallery1 {
-	color: #4dbfd9;
-}
-.post {
-	border-color: #000000;
-}
-.post a {
-	color: black;
-}
-.menubox a:hover {
-	color: green;
-	font-size: 25px;
-	text-decoration: underline;
-}
 p.title {
 	text-align: center;
-	padding: 20px;
-	color: purple;
+	color: black;
+	font-size: 25px;
+	font-family: sans-serif;
 			}
 .gallery {
-	position: relative;
-    left: 282px;
+	position: absolute;
+	left: 25.5%;
+	display: inline-block;
 }
 .gallery img {
 	display: block;
@@ -121,12 +90,6 @@ p {
 	margin: 10px;
 }
 
-body a {
-	text-decoration: none;
-}
-body a p {
-	color: purple;
-}
 
 .gallery img:hover {
 	opacity: 0.8;
@@ -141,8 +104,9 @@ body a p {
 	transform: scale(1.2);
 }
 .wrap {
-	position: absolute;
-	left: 8%;
+	position: relative;
+	width: 1000px;
+	margin: 0 auto;
 }
 #chat {
 	position: fixed;
