@@ -54,6 +54,9 @@ function bai3(mangSo) {
 }
 
 //Bai 4
+//Test case
+//hiep.check=kiemTra; hiep.check(); => Hợp lệ
+//cham.check=kiemTra; cham.check(); => Không hợp lệ
 
 var hiep = {
 	userName: "hieptoan92",
