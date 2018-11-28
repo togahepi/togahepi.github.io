@@ -15,7 +15,12 @@ function binhphuong3so(a,b,c) {
 
 //Bai 3: Cat 10 ki tu dau tien cua chuoi.
 function catChuoi(a) {
-	return(a[0]+a[1]+a[2]+a[3]+a[4]+a[5]+a[6]+a[7]+a[8]+a[9]+'...');
+
+	for (var i = 0; i<10; i++) {
+		document.write(a[i]);
+	}
+
+	document.write("...");
 }
 //Test case
 //catChuoi("Toi la ai tren coi doi nay")
@@ -33,16 +38,16 @@ function bai4(a) {
 
 //Bai 5: Lay ra so nho nhat trong 1 day so.
 function bai5(a) {
-	var b = a.sort();
-	return b[0];
+	a.sort(function(a,b){return a-b});
+	return a[0];
 }
 //Test case
 //bai5([388,34,22,11,55])
 
 //Bai 6: In ra man hinh ten 5 hoc vien sau khi da sap xep.
 function bai6(a) {
-	var b = a.sort();
-	document.write(b);
+	a.sort(function(a,b){return a.localeCompare(b)});
+	document.write(a);
 }
 //Test case
 //bai6(['Hiep','Cham','Linh','Yen','Van'])
@@ -55,29 +60,21 @@ var teacher = {
 	age: 30,
 	say: function(){}
 }
-var aboutTeacher = function(){
-	var loichao = " Xin chào, tôi là "+teacher.lastName+' '+teacher.firstName+". Năm nay tôi "+teacher.age+" tuổi.";
+var aboutMe = function(){
+	var loichao = " Xin chào, tôi là "+ this.lastName+' '+ this.firstName+". Năm nay tôi "+ this.age+" tuổi.";
 	return document.write(loichao);
 }
 var student = {
 	firstName: "Hiệp",
 	lastName: "Hà Văn",
 	age: 26,
-	say: function(){}
-}
-var aboutStudent = function(){
-	var loichao = " Xin chào, tôi là "+student.lastName+' '+student.firstName+". Năm nay tôi "+student.age+" tuổi.";
-	document.write(loichao);
+	say: function() {}
 }
 var parent = {
 	firstName: "Cúc",
 	lastName: "Nguyễn Thị",
 	age: 48,
 	say: function(){}
-}
-var aboutParent = function(){
-	var loichao = " Xin chào, tôi là "+parent.lastName+' '+parent.firstName+". Năm nay tôi "+parent.age+" tuổi.";
-	document.write(loichao);
 }
 //Test case bài 7
 //parent.say=aboutParent; parent.say();

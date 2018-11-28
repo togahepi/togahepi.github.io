@@ -1,9 +1,7 @@
-//Bai 1:
+//Bai 1
 //Test case
 //n=5; 5!=120;
-function bai1() {
-	var n = prompt("Nhap so nguyen duong n: ");
-	n = Number(n);
+function bai1(n) {
 	var m = n;
 	for (var i=1;i<m;i++) {
 		n=n*(m-i);
@@ -15,8 +13,7 @@ function bai1() {
 //Test case
 //"Techmaster.vn" -> "nv.retsamhceT"
 
-function bai2() {
-	var a = prompt("Nhap chuoi can dao nguoc: ");
+function bai2(a) {
 	var n = a.length;
 	var b = "";
 	
@@ -32,9 +29,9 @@ function bai2() {
 //Test case
 //769
 
-function bai3() {
-	var a = prompt("Nhap chuoi so: ");
+function bai3(a) {
 	document.write(a);
+
 	for (var i = 0; i<9; i++) {
 		document.write("-"+a);
 	}
@@ -44,9 +41,10 @@ function bai3() {
 //Test case
 // students = ["Hiep","Hao","Cham","Yen","Hue","Huy"]
 
-function bai4() {
-	var students = ["Hiep","Hao","Cham","Yen","Hue","Huy"];
+function bai4(students) {
+	
 	students.sort();
+
 	for (var i = 0; i<students.length;i++) {
 		document.write((i+1) + ". " + students[i] + "</br>");
 	}
@@ -57,8 +55,7 @@ function bai4() {
 //[4,3,7,8,6,7,4,5,34,22,44,555]
 //Ket qua: [8, 6, 14, 16, 12, 14, 8, 10, 68, 44, 88, 1110]
 
-function bai5() {
-	var daySo = [4,3,7,8,6,7,4,5,34,22,44,555];
+function bai5(daySo) {
 	for (var i = 0; i<daySo.length;i++) {
 		daySo[i]=daySo[i]*2;
 	}
@@ -70,8 +67,7 @@ function bai5() {
 //[4,3,7,8,6,7,4,5,34,22,44,555]
 //Ket qua: [0, 1, 1, 0, 0, 1, 0, 1, 0, 0, 0, 1]
 
-function bai6() {
-	var daySo = [4,3,7,8,6,7,4,5,34,22,44,555];
+function bai6(daySo) {
 	var daySoMoi = [0];
 	for (var i = 0; i<daySo.length;i++) {
 		daySoMoi[i]=daySo[i]%2;
