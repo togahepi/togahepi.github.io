@@ -77,6 +77,6 @@ var parent = {
 	say: function(){}
 }
 //Test case bài 7
-//parent.say=aboutParent; parent.say();
-//student.say=aboutStudent; student.say();
-//teacher.say=aboutTeacher; teacher.say();
+//parent.say=aboutMe; parent.say();
+//student.say=aboutMe; student.say();
+//teacher.say=aboutMe; teacher.say();
