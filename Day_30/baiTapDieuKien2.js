@@ -118,3 +118,23 @@ function bai6() {
 		}
 	}
 }
+
+
+function sumAll(arr) {
+  var all;
+  all = arr[0]+arr[1];
+  if (arr[0]==arr[1]){
+    return all;
+  } else if (arr[0]<arr[1]){
+    for (var i = arr[0]; i<arr[1];i++){
+      all = all + i + 1;
+    }
+    return all;
+  } else {
+    for (var i = arr[1]; i<arr[0];i++){
+      all = all + i + 1;
+    }
+    return all;
+  }
+  document.write(all);
+}
