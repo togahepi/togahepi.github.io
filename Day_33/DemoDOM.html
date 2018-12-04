@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Demo Document Object Model</title>
+		<meta charset="utf-8">
+		<style type="text/css">
+			body {
+				background-color: #80808017;
+			}
+			.box {
+				border: 11px solid pink;
+				height: 400px;
+			}
+			img {
+				width: 300px;
+    			float: left;
+    			padding: 0 15px 2px 15px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Demo Document Object Model</h1>
+		<div class="box">
+			<p id="p1">
+				<a href='https://www.google.com'>
+					<img src="dog.jpg" alt="Dog Lorem Isbum">
+				</a>
+				Sed et tincidunt diam. Suspendisse semper, dui auctor semper lobortis, enim augue tempor purus, sed semper nisl justo sit amet metus. Quisque ac consequat tortor. Aliquam feugiat neque id quam dictum, id accumsan est malesuada. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras gravida a augue non semper. Fusce ultrices est eget nunc posuere tristique. Donec a posuere enim. Maecenas elementum lorem non finibus feugiat. Quisque risus risus, lacinia at consequat ut, tristique a dolor.
+			</p>
+			<p id="p2" class="no-img">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu nunc aliquet, laoreet risus nec, rhoncus augue. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec pretium varius ornare. Sed consectetur placerat tempus. Nulla eleifend, ex ac iaculis varius, nulla magna ornare sem, auctor rutrum purus nibh posuere metus. Quisque quis lorem facilisis, rutrum tellus quis, pellentesque diam.</p>
+			<p id="p3" class="no-img">Pellentesque consectetur tortor vitae risus placerat, tincidunt tincidunt leo tincidunt. Vivamus scelerisque rutrum placerat. Aliquam nec sagittis tellus, non dictum odio. Nullam et consequat ligula, id convallis lorem. Donec ac euismod ligula, a consectetur risus. Nunc rhoncus turpis ultricies risus gravida, vel malesuada lorem eleifend. Morbi vel auctor massa, in pulvinar enim. Integer aliquam diam eu tristique placerat. Nunc molestie cursus elit, nec hendrerit ipsum facilisis ac.</p>
+		</div>
+		<script type="text/javascript">
+			//Bai 1: Thay doi font chu ca 3 doan van
+			
+			function changeFontSize(x) {
+				var doanVan = document.getElementsByTagName("p")
+				var size = x + "px";
+				for (var i = 0; i < doanVan.length; i++) {
+					doanVan[i].style.fontSize = size;
+				}
+			}
+
+			//Bai 2: Thay doi font chu 1 doan van len 1px
+
+			function increaseFontSize(x) {
+				var i = document.getElementById(x).style.fontSize();
+			}
+
+			//Bai 4: Doi mau chu 3 doan van lan luot la xanh, vang, do
+
+			function changeColor() {
+				document.getElementById("p1").style.color = "green";
+				document.getElementById("p2").style.color = "yellow";
+				document.getElementById("p3").style.color = "red";
+			}
+
+			//Bai FizzBuzz
+
+			function FizzBuzz() {
+				for (var i = 1; i<=100; i++) {
+					if (i%15 == 0) {
+						document.write("FizzBuzz ");
+					} else if (i%3 == 0) {
+						document.write("Fizz ");
+					} else if (i%5 == 0) {
+						document.write("Buzz ");
+					} else {
+						document.write(i + " ");
+					}
+				}
+			}
+		</script>
+	</body>
+</html>
