@@ -16,6 +16,9 @@
     			float: left;
     			padding: 0 15px 2px 15px;
 			}
+			#p1 {
+				font-size: 20px;
+			}
 		</style>
 	</head>
 	<body>
@@ -41,11 +44,29 @@
 				}
 			}
 
-			//Bai 2: Thay doi font chu 1 doan van len 1px
+			//Bai 2: Thay doi font chu 1 doan van len 1px va khong qua 30px
 
-			function increaseFontSize(x) {
-				var i = document.getElementById(x).style.fontSize();
+			function increaseFontSize(id){
+			     var doanVan = document.getElementById(id);
+			     var coChu = window.getComputedStyle(doanVan).getPropertyValue('font-size');
+			     var coChuMoi = parseInt(coChu) + 1;
+			     if (coChuMoi <= 30) {
+			     	doanVan.style.fontSize = coChuMoi + "px";
+			     }
 			}
+
+
+			//Bai 3: Thay doi font chu 1 doan van giam xuong 1px va khong duoi 10px
+
+			function decreaseFontSize(id){
+			     var doanVan = document.getElementById(id);
+			     var coChu = window.getComputedStyle(doanVan).getPropertyValue('font-size');
+			     var coChuMoi = parseInt(coChu) - 1;
+			     if (coChuMoi >= 10) {
+			     	doanVan.style.fontSize = coChuMoi + "px";
+			     }
+			}
+
 
 			//Bai 4: Doi mau chu 3 doan van lan luot la xanh, vang, do
 
