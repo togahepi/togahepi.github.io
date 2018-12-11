@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Máy tính Nokia</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		h3 {
+			text-align: center;
+			margin-bottom: 10px;
+			margin-top: 0;
+		}
+		#basic, #input, #advanced {
+			text-align: center;
+		}
+
+		button {
+			font-size: 30px;
+			margin: 8px;
+			width: 50px;
+		}
+
+		#result {
+			position: relative;
+			height: 150px;
+			width: 200px;
+			background-color: #f0f0f0;
+			margin: 0 auto;
+		}
+
+		#so1 {
+			position: absolute;
+			bottom: 100px;
+			right: 20px;
+		}
+
+		#phepTinh {
+			position: absolute;
+    		left: 20px;
+    		top: 30px;
+		}
+
+		#so2 {
+			position: absolute;
+			bottom: 50px;
+			right: 20px;
+		}
+
+		#dauBang {
+			position: absolute;
+		    bottom: 20px;
+		    left: 20px;
+		}
+
+		#so3 {
+			position: absolute;
+			bottom: 0;
+			right: 20px;
+		}
+
+
+		#basic p {
+			margin: 5px;
+		}
+
+		#input p {
+			margin: 5px;
+		}
+
+		#result b {
+			text-decoration: none;
+		}
+
+	</style>
+</head>
+<body>
+	<h3>Máy tính điện thoại Nokia</h3>
+	<div id="result">
+		<p id="so1"></p>
+		<b id="phepTinh"></b>
+		<p id="so2"></p>
+		<b id="dauBang"></b>
+		<p id="so3"></p>
+	</div>
+	<div id="basic">
+		<p>
+			<button>^</button>
+			<button onclick="addSo2()">+</button>
+			<button onclick="AC()">AC</button>
+		</p>
+
+		<p>
+			<button onclick="nhanSo2()">x</button>
+			<button onclick="equals()">=</button>
+			<button onclick="chiaSo2()">:</button>
+		</p>
+
+		<p>
+			<button onclick="canBac2()">√</button>
+			<button onclick="hieuSo2()">-</button>
+			<button onclick="binhPhuong()">²</button>
+		</p>
+		
+		
+	</div>
+	<div id="advanced"></div>
+	<div id="input">
+	
+		<p>
+			<button onclick="press(this)">1</button>
+			<button onclick="press(this)">2</button>
+			<button onclick="press(this)">3</button>
+		</p>
+		
+		<p>
+			<button onclick="press(this)">4</button>
+			<button onclick="press(this)">5</button>
+			<button onclick="press(this)">6</button>
+		</p>
+		
+		<p>
+			<button onclick="press(this)">7</button>
+			<button onclick="press(this)">8</button>
+			<button onclick="press(this)">9</button>
+		</p>
+		
+		<p>
+			<button onclick="soAm()">-</button>
+			<button onclick="press(this)">0</button>
+			<button onclick="thapPhan()">.</button>
+		</p>
+	</div>
+	<script type="text/javascript">
+		var so1 = document.getElementById("so1");
+		var so2 = document.getElementById("so2");
+		var so3 = document.getElementById("so3");
+		var phepTinh = document.getElementById("phepTinh");
+		var dauBang = document.getElementById("dauBang");
+
+		
+		function press(button) {
+			so3.innerHTML = so3.innerHTML + button.innerHTML;
+		}
+
+		function AC() {
+			so1.innerHTML = "";
+			so2.innerHTML = "";
+			so3.innerHTML = "";
+			dauBang.innerText = "";
+			phepTinh.innerText = "";
+			phepTinh.style.top = "30px";
+			phepTinh.style.left = "20px";
+		}
+
+		function thapPhan() {
+			so3.innerHTML = so3.innerHTML + ".";
+		}
+
+		function soAm() {
+			so3.innerHTML = "-" + so3.innerHTML;
+		}
+
+		function equals() {
+			if (phepTinh.innerText == "+") {
+				sum()
+			} else if (phepTinh.innerText == "-") {
+				hieu()
+			} else if (phepTinh.innerText == "x") {
+				nhan()
+			} else if (phepTinh.innerText == ":") {
+				chia()
+			} else if (phepTinh.innerText == "√") {
+				canBac2()
+			} else if (phepTinh.innerText == "²") {
+				binhPhuong()
+			}
+		}
+
+		function addSo2() {
+			so2.innerHTML = so3.innerHTML;
+			phepTinh.innerText = "+";
+			phepTinh.style.top = "75px";
+			so3.innerHTML = "";
+		}
+		
+		function sum() {
+			so1.innerHTML = so2.innerHTML;
+			so2.innerHTML = so3.innerHTML;
+			var x = so1.innerHTML;
+			var y = so2.innerHTML;
+			dauBang.innerText = "=";
+			phepTinh.style.top = "30px";
+			so3.innerHTML = Number(x)+Number(y);
+		}
+
+		function hieuSo2() {
+			so2.innerHTML = so3.innerHTML;
+			phepTinh.innerText = "-";
+			phepTinh.style.top = "75px";
+			so3.innerHTML = "";
+		}
+
+		function hieu() {
+			so1.innerHTML = so2.innerHTML;
+			so2.innerHTML = so3.innerHTML;
+			var x = so1.innerHTML;
+			var y = so2.innerHTML;
+			dauBang.innerText = "=";
+			phepTinh.style.top = "30px";
+			so3.innerHTML = Number(x)-Number(y);
+		}
+
+		function nhanSo2() {
+			so2.innerHTML = so3.innerHTML;
+			phepTinh.innerText = "x";
+			phepTinh.style.top = "75px";
+			so3.innerHTML = "";
+		}
+
+		function nhan() {
+			so1.innerHTML = so2.innerHTML;
+			so2.innerHTML = so3.innerHTML;
+			var x = so1.innerHTML;
+			var y = so2.innerHTML;
+			dauBang.innerText = "=";
+			phepTinh.style.top = "30px";
+			var z = Number(x)*Number(y)
+			so3.innerHTML = z.toFixed(12);
+		}
+
+		function chiaSo2() {
+			so2.innerHTML = so3.innerHTML;
+			phepTinh.innerText = ":";
+			phepTinh.style.top = "75px";
+			so3.innerHTML = "";
+		}
+
+		function chia() {
+			so1.innerHTML = so2.innerHTML;
+			so2.innerHTML = so3.innerHTML;
+			var x = so1.innerHTML;
+			var y = so2.innerHTML;
+			dauBang.innerText = "=";
+			phepTinh.style.top = "30px";
+			var z = Number(x)/Number(y)
+			so3.innerHTML = z.toFixed(12);
+		}
+
+		function canBac2() {
+			phepTinh.innerText = "√";
+			if (so3.innerHTML == "") {
+
+			} else {
+				so2.innerHTML = so3.innerHTML;
+				var x = so2.innerHTML;
+				dauBang.innerText = "=";
+				phepTinh.style.top = "58px";
+				var y = Math.sqrt(Number(x));
+				so3.innerHTML = y.toFixed(10);
+
+			}
+		}
+
+		function binhPhuong() {
+			phepTinh.innerText = "²";
+			if (so3.innerHTML == "") {
+
+			} else {
+				so2.innerHTML = so3.innerHTML;
+				var x = so2.innerHTML;
+				dauBang.innerText = "=";
+				phepTinh.style.top = "51px";
+				phepTinh.style.left = "182px";
+				var y = Number(x)*Number(x);
+				so3.innerHTML = y.toFixed(4);
+			}
+		}
+	</script>
+</body>
+</html>
