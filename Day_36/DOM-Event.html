@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DOM Event</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<div class="wrap">
+		<h1>Demo DOM Event</h1>
+		<button onclick="press(this)">Button 1</button>
+
+		<button onclick="press(this)">Button 2</button>
+
+		<button onclick="press(this)">Button 3</button>
+
+	</div>
+
+	<h1>Máy tính</h1>
+
+	x = <input type="text" id="x">
+	y = <input type="text" id="y">
+
+	<button onclick="sum()">Tính tổng</button>
+
+	<p>x + y = <b id="result"></b></p>
+	
+
+
+	<script type="text/javascript">
+		function press(button87) {
+			alert(button87.innerHTML + " đã bị bấm!")
+		}
+
+		function sum() {
+			var x = document.getElementById("x").value;
+			var y = document.getElementById("y").value;
+
+			document.getElementById("result").innerText = Number(x) + Number(y);
+		}
+	</script>
+</body>
+</html>
