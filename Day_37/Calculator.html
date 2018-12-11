@@ -22,7 +22,7 @@
 		#result {
 			position: relative;
 			height: 150px;
-			width: 200px;
+			width: 350px;
 			background-color: #f0f0f0;
 			margin: 0 auto;
 		}
@@ -75,8 +75,11 @@
 <body>
 	<h3>Máy tính điện thoại cục gạch Nokia</h3>
 	<div id="result">
-		<p id="so1"></p>
-		<b id="phepTinh"></b>
+		<div id="wrap">
+			<p id="so1"></p>
+			<b id="phepTinh"></b>
+		</div>
+		
 		<p id="so2"></p>
 		<b id="dauBang"></b>
 		<p id="so3"></p>
@@ -269,9 +272,8 @@
 				var x = so2.innerHTML;
 				dauBang.innerText = "=";
 				phepTinh.style.top = "51px";
-				phepTinh.style.left = "182px";
-				var y = Number(x)*Number(x);
-				so3.innerHTML = y.toFixed(4);
+				phepTinh.style.left = "330px";
+				so3.innerHTML = Number(x)*Number(x);
 			}
 		}
 	</script>
