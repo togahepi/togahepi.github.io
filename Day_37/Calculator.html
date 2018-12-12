@@ -150,6 +150,7 @@
 			so3.innerHTML = "";
 			dauBang.innerText = "";
 			phepTinh.innerText = "";
+			phepTinh.style.display = "block";
 			phepTinh.style.top = "30px";
 			phepTinh.style.left = "20px";
 		}
@@ -250,13 +251,18 @@
 
 		function canBac2() {
 			phepTinh.innerText = "√";
-			if (so3.innerHTML == "") {
 
+			if (so3.innerHTML == "") {
+				phepTinh.style.display = "block";
+				phepTinh.style.bottom = "20px";
+				phepTinh.style.top = "unset";
 			} else {
+				phepTinh.style.display = "none";
 				so2.innerHTML = so3.innerHTML;
 				var x = so2.innerHTML;
+				so2.innerHTML = "√" + x;
 				dauBang.innerText = "=";
-				phepTinh.style.top = "58px";
+				
 				var y = Math.sqrt(Number(x));
 				so3.innerHTML = y.toFixed(10);
 
