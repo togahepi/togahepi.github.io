@@ -57,6 +57,10 @@
 			right: 20px;
 		}
 
+		#soMu {
+			position: absolute;
+		}
+
 
 		#basic p {
 			margin: 5px;
@@ -81,12 +85,13 @@
 		</div>
 		
 		<p id="so2"></p>
+		<p id="soMu"></p>
 		<b id="dauBang"></b>
 		<p id="so3"></p>
 	</div>
 	<div id="basic">
 		<p>
-			<button>^</button>
+			<button onclick="soMu()">^</button>
 			<button onclick="addSo2()">+</button>
 			<button onclick="AC()">AC</button>
 		</p>
@@ -136,6 +141,7 @@
 		var so1 = document.getElementById("so1");
 		var so2 = document.getElementById("so2");
 		var so3 = document.getElementById("so3");
+		var somu = document.getElementById("soMu");
 		var phepTinh = document.getElementById("phepTinh");
 		var dauBang = document.getElementById("dauBang");
 
@@ -153,6 +159,15 @@
 			phepTinh.style.display = "block";
 			phepTinh.style.top = "30px";
 			phepTinh.style.left = "20px";
+			somu.style.display = "none";
+			so3.style.bottom = "0px";
+			so3.style.right = "20px";
+			so3.style.left = "unset";
+			so2.style.bottom = "50px";
+			so2.style.right = "20px";
+			so2.style.left = "unset";
+			dauBang.style.left = "20px";
+			dauBang.style.bottom = "20px";
 		}
 
 		function thapPhan() {
@@ -176,6 +191,8 @@
 				canBac2()
 			} else if (phepTinh.innerText == "²") {
 				binhPhuong()
+			} else if (phepTinh.innerText == "^") {
+				luyThua()
 			}
 		}
 
@@ -282,6 +299,47 @@
 				so3.innerHTML = Number(x)*Number(x);
 			}
 		}
+
+		function soMu() {
+			phepTinh.innerText = "^";
+			phepTinh.style.display = "none";
+			so2.innerHTML = so3.innerHTML;
+			so2.style.bottom = "30px";
+			so2.style.left = "20px";
+			so2.style.width = "fit-content";
+			var x = so2.innerHTML;
+			var rongSo2 = window.getComputedStyle(so2).getPropertyValue('width');
+			var leftSo3 = parseInt(rongSo2) + 20;
+			so3.innerHTML = "";
+			so3.style.fontSize = "12px";
+			so3.style.left = leftSo3 + "px";
+			so3.style.bottom = "56px";
+		}
+
+		function luyThua() {
+			var x = Number(so2.innerHTML);
+			var y = Number(so3.innerHTML);
+			var luyThua = 1;
+			for (i=0;i<y;i++) {
+				luyThua = luyThua*x;
+			}
+			dauBang.innerText = "=";
+			dauBang.style.bottom = "33px";
+			dauBang.style.left = "6px";
+			somu.innerHTML = so3.innerHTML;
+			var rongSo2 = window.getComputedStyle(so2).getPropertyValue('width');
+			var leftSoMu = parseInt(rongSo2) + 20;
+			somu.style.display = "block";
+			somu.style.fontSize = "12px";
+			somu.style.left = leftSoMu + "px";
+			somu.style.bottom = "56px";
+
+			so3.innerHTML = luyThua;
+			so3.style.fontSize = "unset";
+			so3.style.bottom = "0px";
+			so3.style.left = "20px";
+		}
+
 	</script>
 </body>
 </html>
