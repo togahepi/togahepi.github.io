@@ -21,6 +21,7 @@
       
       /* Add the blur effect */
       filter: brightness(70%);
+      filter: blur(3px);
       
       /* Full height */
       height: 100%; 
@@ -34,7 +35,7 @@
     /* Position text in the middle of the page/image */
     .bg-text {
       background-color: rgb(0,0,0); /* Fallback color */
-      background-color: rgba(0,0,0, 0.3); /* Black w/opacity/see-through */
+      background-color: rgba(0,0,0, 0.5); /* Black w/opacity/see-through */
       color: white;
       border: 3px solid #f1f1f1;
       position: absolute;
@@ -55,15 +56,31 @@
       background: hsla(0,0%,100%,.4);
       cursor: pointer;
     }
-    #soThuTu {
-      font-size: 16px;
-    }
     b {
       font-weight: normal;
     }
     i {
       font-style: normal;
     }
+    z {
+      margin: 5px;
+      cursor: pointer;
+    }
+    .cau:link {
+      color: white;
+    }
+    .cau: visited{
+      color: yellow;
+    }
+    .cau:hover {
+      color: red;
+    }
+    .cau {
+      text-decoration: none;
+      margin: 5px;
+      cursor: pointer;
+    }
+
   </style>
 </head>
 <body>
@@ -71,21 +88,107 @@
 <div class="bg-image"></div>
 
 <div class="bg-text">
-  <p id="soThuTu"><i>1/10</i> | Hỏi xoáy đáp xoay về rượu</p>
-  <h2>Gạo nếp cẩm có chứa một chất chống oxi hóa rất tốt là?</h2>
-  <p id="cau1" class="dapAn" onclick="dung()"><b>A. </b>Anthocyanin</p>
-  <p id="cau2" class="dapAn" onclick="sai()"><b>B. </b>Cepecyanin</p>
-  <p id="cau3" class="dapAn" onclick="sai()"><b>C. </b>Togacyanin</p>
-  <p id="cau4" class="dapAn" onclick="sai()"><b>D. </b>Hepicyanin</p>
+  <p>Hỏi xoáy đáp xoay về rượu</p>
+  <h2 id="cauHoi">Gạo nếp cẩm có chứa một chất chống oxi hóa rất tốt là?</h2>
+  <p id="A" class="dapAn" onclick="chon(this)">A. Anthocyanin</p>
+  <p id="B" class="dapAn" onclick="chon(this)">B. Cepecyanin</p>
+  <p id="C" class="dapAn" onclick="chon(this)">C. Togacyanin</p>
+  <p id="D" class="dapAn" onclick="chon(this)">D. Hepicyanin</p>
+  <div id="status">
+    <p>Bạn đã chọn đáp án: </p>
+    <p style="display: inline; cursor: pointer;">
+      Lựa chọn câu hỏi: 
+      <a onclick="doChange(cau1)" class="cau"> 1 </a>
+      <a onclick="doChange(cau2)" class="cau"> 2 </a>
+      <a onclick="doChange(cau3)" class="cau"> 3 </a>
+      <a onclick="doChange(cau4)" class="cau"> 4 </a>
+      <a onclick="doChange(cau5)" class="cau"> 5 </a>
+      <a onclick="doChange(cau6)" class="cau"> 6 </a>
+    </p>
+  </div>
 </div>
 
 <script type="text/javascript">
-  function dung() {
-    alert("Đúng rồi! :D")
+  var cauHoi = document.getElementById("cauHoi");
+  var a = document.getElementById("A");
+  var b = document.getElementById("B");
+  var c = document.getElementById("C");
+  var d = document.getElementById("D");
+
+  function chon(dapAn) {
+    var color = dapAn.style.backgroundColor;
+    dapAn.style.backgroundColor = "hsla(0,0%,100%,.4)";
   }
-  function sai() {
-    alert("Sai rồi! Chọn lại đi! :D")
+
+  var cau1 = {
+    question: "Gạo nếp cẩm có chứa một chất chống oxi hóa rất tốt là?",
+    a: "A. Anthocyanin",
+    b: "B. Cepecyanin",
+    c: "C. Togacyanin",
+    d: "D. Hepicyanin",
+    change: function(){}
   }
+
+  var cau2 = {
+    question: "Gạo nếp dẻo là do cấu tạo hóa học đặc biệt của nó gồm 2 thành phần là Amyloza và Amylopectin. Vậy tỉ lệ nào là đúng trong gạo nếp?",
+    a: "A. Amylopectin 90% và Amyloza 10%",
+    b: "B. Amylopectin 80% và Amyloza 20%",
+    c: "C. Amylopectin 20% và Amyloza 80%",
+    d: "D. Amylopectin 10% và Amyloza 90%",
+    change: function(){}
+  }
+
+  var cau3 = {
+    question: "Các vitamin như B1, B6, B12, PP và axít folic có nhiều trong thành phần nào của hạt lúa?",
+    a: "A. Vỏ trấu",
+    b: "B. Hạt gạo trắng tinh",
+    c: "C. Lớp cám gạo",
+    d: "D. Mầm hạt gạo",
+    change: function(){}
+  }
+
+  var cau4 = {
+    question: "Loại gạo nào đắt nhất thế giới với giá 109 USD/kg?",
+    a: "A. Gạo cẩm Điện Biên",
+    b: "B. Gạo nếp cái hoa vàng",
+    c: "C. Gạo tẻ",
+    d: "D. Gạo Nhật Kinmemai Premium",
+    change: function(){}
+  }
+
+  var cau5 = {
+    question: "Loại gạo nào được mệnh danh thơm nhất thế giới?",
+    a: "A. Gạo nếp thơm Việt Nam",
+    b: "B. Gạo đen",
+    c: "C. Gạo nếp Hải Hậu",
+    d: "D. Gạo Basmati, Ấn Độ",
+    change: function(){}
+  }
+
+  var cau6 = {
+    question: "Ngôi làng nào ở Nhật nổi tiếng với những cánh đồng lúa là các tác phẩm nghệ thuật tranh tuyệt đẹp?",
+    a: "A. Ozawa Makia",
+    b: "B. Onizuka Sensei",
+    c: "C. Inakadate",
+    d: "D. Tokyo Hot",
+    change: function(){}
+  }
+
+  var changeQuestion = function(){
+    cauHoi.innerText = this.question;
+    a.innerText = this.a;
+    b.innerHTML = this.b;
+    c.innerHTML = this.c;
+    d.innerHTML = this.d;
+    return "";
+  }
+
+  function doChange(x) {
+    x.change = changeQuestion;
+    x.change();
+  }
+
+
 </script>
 
 </body>
